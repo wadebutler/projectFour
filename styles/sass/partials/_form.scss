@@ -1,0 +1,189 @@
+main {
+    padding-top: 40px;
+    position: relative;
+}
+
+.showBegins {
+    position: relative;
+}
+
+.genre {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 20px;
+
+    .genreGrid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 15px;
+    }
+}
+
+.genreImage {
+    height: 120px;
+    
+    input:focus + label {
+        background-color: rgba(220, 20, 60, .4);
+    }
+    
+    input:checked + label {
+        background-color: $color-tertiary;
+        color: $color-primary;
+    }
+    
+    label {
+        font-family: $font-secondary;
+        font-size: 2rem;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        color: $color-light;
+        background-color: $color-secondary;
+        border: 2px solid transparent;
+        border-radius: 5px;
+        padding: 10px;
+        cursor: pointer;
+
+        &:hover {
+            border: 2px solid $color-tertiary;
+        }
+    }
+}
+
+.yearInput {
+    font-size: 2rem;
+    margin: 2% 0;
+    color: $color-light;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    label {
+        font-family: $font-secondary;
+    }
+    
+    input {
+        height: 3rem;
+        font-family: $font-secondary;
+        font-size: 1.4rem;
+        border: none;
+        border-radius: 5px;
+        box-shadow: inset 0px 0px 3px $color-primary;
+        padding: 5px 10px;
+        margin-left: 1rem;
+    }
+}
+
+.formSubmit,
+.resetButton {
+    text-align: center;
+    font-size: 2rem;    
+}
+
+.formSubmit {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.resetButton {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translate(-50%);
+    display: none;
+}
+
+.getMovies,
+.resetButton {
+    font-family: $font-secondary;
+    font-weight: bolder;
+    background-color: $color-tertiary;
+    color: $color-primary; 
+    border: none;
+    padding: 12px 40px 10px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s;
+
+    &:hover {
+        border: 2px solid $color-tertiary;
+        background-color: $color-secondary;
+        color: $color-light;
+    }
+}
+
+// Genre SVG Backgrounds Style starts
+.genreImage {
+    .svg {
+        background-repeat: no-repeat;
+        background-position: center 100%;
+    }
+    
+    .action {
+        background-image: url(../image/action.svg);
+        background-size: 50%;
+    }
+
+    .animation {
+        background-image: url(../image/animation.svg);
+        background-size: 40%;
+
+    }
+
+    .comedy {
+        background-image: url(../image/comedy.svg);
+        background-size: 40%;
+    }
+
+    .drama {
+        background-image: url(../image/drama.svg);
+        background-size: 55%;
+    }
+
+    .fantasy {
+        background-image: url(../image/fantasy.svg);
+        background-size: 45%;
+    }
+
+    .horror {
+        background-image: url(../image/horror.svg);
+        background-size: 50%;
+    }
+
+    .musical {
+        background-image: url(../image/musical.svg);
+        background-size: 45%;
+    }
+
+    .romance {
+        background-image: url(../image/romance.svg);
+        background-size: 60%;
+    }
+
+    .sci-fi {
+        background-image: url(../image/sci-fi.svg);
+        background-size: 40%;
+    }
+
+    .thriller {
+        background-image: url(../image/thriller.svg);
+        background-size: 40%;
+    }
+
+    .war {
+        background-image: url(../image/war.svg);
+        background-size: 40%;
+    }
+
+    .western {
+        background-image: url(../image/western.svg);
+        background-size: 50%;
+    }
+}
+// Genre SVG Backgrounds Style ends

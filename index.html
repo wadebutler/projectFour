@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Film Lovers Club | Mehdi + Wade</title>
+    <link type="image/png" href="image/filmReelIcon.png" rel="icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        @font-face {
+            font-family: beon;
+            src: url(fonts/beon-webfont.ttf);
+        }
+
+        @font-face {
+            font-family: roadMovie;
+            src: url(fonts/roadMovieTRIAL.ttf);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- header starts here -->
+    <header>
+        <div>
+            <h1>Film Lovers Club</h1>
+            <button class="instructions"><i class="fas fa-info-circle"></i></button>
+        </div>
+    </header>
+    <!-- header ends here -->
+    
+    <!-- main starts here -->
+    <main class="wrapper">
+        <section class="showBegins">
+            <form action="" class="movieForm">
+                <div class="yearInput">
+                    <label for="year">Enter a Year:</label>
+                    <input type="number" id="year" maxlength="4" min="1895" max="2020" placeholder="Year">
+                </div>
+            </form>
+
+            <div class="genre">
+                <ul class="genreGrid">
+                    <li class="genreImage action">
+                        <input class="hide" type="radio" name="genre" id="action" value="28">
+                        <label for="action" class="action svg">Action</label>
+                    </li>
+                
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="animation" value="16">
+                        <label for="animation" class="animation svg">Animation</label>
+                    </li>
+
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="comedy" value="35">
+                        <label for="comedy" class="comedy svg">Comedy</label>
+                    </li>
+                    
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="drama" value="18">
+                        <label for="drama" class="drama svg">Drama</label>
+                    </li>
+
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="fantasy" value="14">
+                        <label for="fantasy" class="fantasy svg">Fantasy</label>
+                    </li>
+                    
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="horror" value="27">
+                        <label for="horror" class="horror svg">Horror</label>
+                    </li>
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="music" value="10402">
+                        <label for="music" class="musical svg">Musical</label>
+                    </li>
+                   
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="romance" value="10749">
+                        <label for="romance" class="romance svg">Romance</label>
+                    </li>
+
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="sci-fi" value="878">
+                        <label for="sci-fi" class="sci-fi svg">Sci-Fi</label>
+                    </li>
+
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="thriller" value="53">
+                        <label for="thriller" class="thriller svg">Thriller</label>
+                    </li>
+
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="war" value="10752">
+                        <label for="war" class="war svg">War</label>
+                    </li>
+                    
+                    <li class="genreImage">
+                        <input class="hide" type="radio" name="genre" id="western" value="37">
+                        <label for="western" class="western svg">Western</label>
+                    </li>
+                </ul>
+                <div class="formSubmit">
+                    <button class="getMovies" type="submit" id="submit">Get Movies</button>
+                </div>
+            </div>
+        </section>
+        
+        <!-- result page starts here -->
+        <section class="landingPage">
+            <div class="resultPageSection">
+                <!-- results dynamically append here on user click -->
+            </div>
+            <button class="resetButton" id="submit">Reset</button> 
+        </section>
+        <!-- result page ends here -->
+    </main>
+    <!-- main ends here -->
+
+    <!-- footer starts here -->
+    <footer id="footer">
+        <!-- footer dynamically appends here on user click -->
+    </footer>
+    <!-- footer ends here -->
+    
+    <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
+    <script src="script.js"></script>
+</body>
+</html>
