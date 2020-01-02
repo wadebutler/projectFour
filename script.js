@@ -27,7 +27,7 @@ movieApp.getInfo = function () {
         movieApp.newResult.forEach((movie, index) => {
             let movieHtml = 
             `<div class="flip-card">
-                <div class="flip-card-inner">
+                <div tabindex="0" class="flip-card-inner">
                     <div class="flip-card-front">
                         <img src="https://image.tmdb.org/t/p/w500${movie.poster_path}" alt="${movie.title} pxoster">
                     </div>
@@ -90,7 +90,7 @@ movieApp.displayMovies = function () {
 }
 
 // Function to prevent user getting result before entering a valid year
-movieApp.userSubmission = function() {
+movieApp.userSubmission = function () {
     $(".getMovies").on("click", function (e) {
         e.preventDefault();
 
@@ -139,7 +139,6 @@ movieApp.userSubmission = function() {
             movieApp.getInfo();
             movieApp.displaySearchPage();
             movieApp.displayMovies();
-            movieApp.showFooter();
 
             // display reset button on the result page
             $('.resetButton').css({
@@ -149,13 +148,12 @@ movieApp.userSubmission = function() {
     });
 }
 
-movieApp.showFooter = function() {
-    const displayFooter = 
-    `<div class="wrapper">
-        <p>Copyright &#169; 2019 <span>Mehdi Pilehvarian</span> and <span>Wade Butler</span></p>
-    </div>`
-    // appends footer tot the second page on a user click
-    $('footer').append(displayFooter);
+movieApp.displayReset = function () {
+    $('.getMovies').on('click', function () {
+        $('.resetButton').css({
+            "display": "block"
+        });
+    })
 }
 
 // Create init to start the movieApp initiating on click of submit button

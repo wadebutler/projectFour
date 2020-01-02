@@ -2,7 +2,10 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px; 
-    padding-top: 40px;
+}
+
+.landingPage {
+    text-align: center;
 }
 
 .flip-card {
@@ -18,6 +21,7 @@
 .flip-card-front, .flip-card-back {
     backface-visibility: hidden;
     border-radius: 20px;
+    transition: 1s;
 }
 
 .flip-card-front {
@@ -63,5 +67,9 @@
 
 .flip-card-inner:hover {
     cursor: pointer;
+    transform: rotateY(180deg);
+}
+
+.flip-card-inner:focus {
     transform: rotateY(180deg);
 }

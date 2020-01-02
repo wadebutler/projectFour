@@ -10,7 +10,6 @@ main {
 .genre {
     display: flex;
     flex-direction: column;
-
     margin-top: 20px;
 
     .genreGrid {
@@ -22,7 +21,7 @@ main {
 
 .genreImage {
     height: 120px;
-    
+
     input:focus + label {
         background-color: rgba(220, 20, 60, .4);
     }
@@ -84,18 +83,12 @@ main {
 }
 
 .formSubmit {
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translate(-50%);
+    margin-top: 20px;
 }
 
 .resetButton {
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    transform: translate(-50%);
     display: none;
+    margin: 20px auto;
 }
 
 .getMovies,

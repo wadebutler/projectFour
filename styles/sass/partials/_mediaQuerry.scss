@@ -22,7 +22,18 @@
     }
 }
 
+@media (max-width: 680px) {
+    
+    .landingPage {
+        margin-top: 60px;
+    }
+}
+
 @media (max-width: 650px) {
+
+    .formSubmit {
+        text-align: center;
+    }
 
     .flip-card-back {
 
@@ -110,7 +121,6 @@
     }
 
     .getMovies {
-        display: block;
         margin-bottom: 20px;
     }
 }
@@ -142,10 +152,6 @@
     .resultPageSection {
         padding: 8% 14%;
         margin-bottom: 140px;
-    }
-
-    .getMovies {
-        width: 100%;
     }
 
     footer {

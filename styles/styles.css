@@ -468,20 +468,12 @@ main {
 }
 
 .formSubmit {
-  position: absolute;
-  bottom: -100px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  margin-top: 20px;
 }
 
 .resetButton {
-  position: absolute;
-  bottom: -100px;
-  left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
   display: none;
+  margin: 20px auto;
 }
 
 .getMovies,
@@ -577,7 +569,10 @@ main {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
-  padding-top: 40px;
+}
+
+.landingPage {
+  text-align: center;
 }
 
 .flip-card {
@@ -599,6 +594,8 @@ main {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   border-radius: 20px;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .flip-card-front {
@@ -647,11 +644,13 @@ main {
           transform: rotateY(180deg);
 }
 
+.flip-card-inner:focus {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background: #17103D;
+  display: block;
 }
 
 footer p {
@@ -683,7 +682,16 @@ footer p span {
   }
 }
 
+@media (max-width: 680px) {
+  .landingPage {
+    margin-top: 60px;
+  }
+}
+
 @media (max-width: 650px) {
+  .formSubmit {
+    text-align: center;
+  }
   .flip-card-back {
     padding: 40px;
   }
@@ -746,7 +754,6 @@ footer p span {
     background-size: 40%;
   }
   .getMovies {
-    display: block;
     margin-bottom: 20px;
   }
 }
@@ -775,9 +782,6 @@ footer p span {
   .resultPageSection {
     padding: 8% 14%;
     margin-bottom: 140px;
-  }
-  .getMovies {
-    width: 100%;
   }
   footer p {
     font-size: 1.6rem;
